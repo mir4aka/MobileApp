@@ -20,6 +20,9 @@ public class OfferEntity{
     private UUID id;
     
     @Column(nullable = false)
+    private String description;
+    
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private EngineEnum engine;
     
@@ -49,6 +52,14 @@ public class OfferEntity{
     
     public void setId(UUID id) {
         this.id = id;
+    }
+    
+    public String getDescription() {
+        return description;
+    }
+    
+    public void setDescription(String description) {
+        this.description = description;
     }
     
     public EngineEnum getEngine() {
@@ -119,6 +130,7 @@ public class OfferEntity{
     public String toString() {
         return "OfferEntity{" +
                 "id=" + id +
+                ", description='" + description + '\'' +
                 ", engine=" + engine +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", mileage=" + mileage +
