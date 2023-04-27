@@ -27,54 +27,48 @@ public class ModelEntity extends BaseEntity {
         return name;
     }
     
-    public ModelEntity setName(String name) {
+    public void setName(String name) {
         this.name = name;
-        return this;
     }
     
     public CategoryEnum getCategory() {
         return category;
     }
     
-    public ModelEntity setCategory(CategoryEnum category) {
+    public void setCategory(CategoryEnum category) {
         this.category = category;
-        return this;
     }
     
     public String getImageUrl() {
         return imageUrl;
     }
     
-    public ModelEntity setImageUrl(String imageUrl) {
+    public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
-        return this;
     }
     
     public int getStartYear() {
         return startYear;
     }
     
-    public ModelEntity setStartYear(int startYear) {
+    public void setStartYear(int startYear) {
         this.startYear = startYear;
-        return this;
     }
     
     public int getEndYear() {
         return endYear;
     }
     
-    public ModelEntity setEndYear(int endYear) {
+    public void setEndYear(int endYear) {
         this.endYear = endYear;
-        return this;
     }
     
     public BrandEntity getBrand() {
         return brand;
     }
     
-    public ModelEntity setBrand(BrandEntity brand) {
+    public void setBrand(BrandEntity brand) {
         this.brand = brand;
-        return this;
     }
     
     @Override
