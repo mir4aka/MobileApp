@@ -1,6 +1,7 @@
 package ProjectMobilelele.mobilele.service;
 
 import ProjectMobilelele.mobilele.model.DTO.UserLoginDTO;
+import ProjectMobilelele.mobilele.model.DTO.UserRegisterDTO;
 import ProjectMobilelele.mobilele.model.entity.UserEntity;
 import ProjectMobilelele.mobilele.repository.UserRepository;
 import ProjectMobilelele.mobilele.user.CurrentUser;
@@ -24,6 +25,22 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
     
+    public void registerAndLogin(UserRegisterDTO userRegisterDTO) {
+        UserEntity userEntity = userCreation(userRegisterDTO);
+        
+        userEntity = userRepository.save(userEntity);
+        login(userEntity);
+    }
+    
+    private UserEntity userCreation(UserRegisterDTO userRegisterDTO) {
+        UserEntity userEntity = new UserEntity();
+        userEntity.setActive(true);
+        userEntity.setEmail(userRegisterDTO.getEmail());
+        userEntity.setFirstName(userRegisterDTO.getFirstName());
+        userEntity.setLastName(userRegisterDTO.getLastName());
+        userEntity.setPassword(passwordEncoder.encode(userRegisterDTO.getPassword()));
+        return userEntity;
+    }
     
     public boolean login(UserLoginDTO userLoginDTO) {
         Optional<UserEntity> userOpt = userRepository.findByEmail(userLoginDTO.getUsername());
