@@ -1,4 +1,4 @@
-package ProjectMobilelele.mobilele.model.entity.enums;
+package ProjectMobilelele.mobilele.model.enums;
 
 public enum EngineEnum {
     GASOLINE, DIESEL, ELECTRIC, HYBRID

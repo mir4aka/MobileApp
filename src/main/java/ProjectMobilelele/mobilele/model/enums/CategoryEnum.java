@@ -1,4 +1,4 @@
-package ProjectMobilelele.mobilele.model.entity.enums;
+package ProjectMobilelele.mobilele.model.enums;
 
 public enum CategoryEnum {
     CAR, BUS, TRUCK, MOTORCYCLE

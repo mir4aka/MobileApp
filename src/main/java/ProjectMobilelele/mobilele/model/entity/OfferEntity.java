@@ -1,10 +1,9 @@
 package ProjectMobilelele.mobilele.model.entity;
 
-import ProjectMobilelele.mobilele.model.entity.enums.EngineEnum;
-import ProjectMobilelele.mobilele.model.entity.enums.TransmissionEnum;
+import ProjectMobilelele.mobilele.model.enums.EngineEnum;
+import ProjectMobilelele.mobilele.model.enums.TransmissionEnum;
 import jakarta.persistence.*;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
 
 import java.math.BigDecimal;
 import java.util.UUID;

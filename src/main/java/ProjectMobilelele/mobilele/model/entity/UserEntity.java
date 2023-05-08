@@ -20,6 +20,8 @@ public class UserEntity extends BaseEntity{
     private boolean isActive;
     private String imageUrl;
     
+    private String username;
+    
     @ManyToMany(fetch = FetchType.EAGER)
     private List<UserRoleEntity> userRoles = new ArrayList<>();
     
@@ -95,5 +97,13 @@ public class UserEntity extends BaseEntity{
                 ", imageUrl='" + imageUrl + '\'' +
                 ", userRoles=" + userRoles +
                 '}';
+    }
+    
+    public String getUsername() {
+        return username;
+    }
+    
+    public void setUsername(String username) {
+        this.username = username;
     }
 }
